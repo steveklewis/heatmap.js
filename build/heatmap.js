@@ -524,8 +524,8 @@ var Canvas2dRenderer = (function Canvas2dRendererClosure() {
 
       }
 
-      img.data = imgData;
-      this.ctx.putImageData(img, x, y);
+      var newImageData = new ImageData(imgData, width, height);
+      this.ctx.putImageData(newImageData, x, y);
 
       this._renderBoundaries = [1000, 1000, 0, 0];
 
